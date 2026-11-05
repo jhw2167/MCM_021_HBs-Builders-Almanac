@@ -1,6 +1,6 @@
-package com.holybuckets.template.platform;
+package com.holybuckets.builder.platform;
 
-import com.holybuckets.template.platform.services.IPlatformHelper;
+import com.holybuckets.builder.platform.services.IPlatformHelper;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.loading.FMLLoader;
 

@@ -1,7 +1,7 @@
-package com.holybuckets.template.menu;
+package com.holybuckets.builder.menu;
 
-import com.holybuckets.template.Constants;
-import com.holybuckets.template.block.be.TemplateBlockEntity;
+import com.holybuckets.builder.Constants;
+import com.holybuckets.builder.block.be.TemplateBlockEntity;
 import net.blay09.mods.balm.api.DeferredObject;
 import net.blay09.mods.balm.api.menu.BalmMenus;
 import net.minecraft.core.BlockPos;

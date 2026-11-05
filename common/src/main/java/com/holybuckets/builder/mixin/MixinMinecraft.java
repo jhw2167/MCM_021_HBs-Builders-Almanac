@@ -1,6 +1,6 @@
-package com.holybuckets.template.mixin;
+package com.holybuckets.builder.mixin;
 
-import com.holybuckets.template.Constants;
+import com.holybuckets.builder.Constants;
 import net.minecraft.client.Minecraft;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -13,7 +13,7 @@ public class MixinMinecraft {
     @Inject(at = @At("TAIL"), method = "<init>")
     private void init(CallbackInfo info) {
         
-        com.holybuckets.template.Constants.LOG.info("This line is printed by an example mod common mixin!");
+        com.holybuckets.builder.Constants.LOG.info("This line is printed by an example mod common mixin!");
         Constants.LOG.info("MC Version: {}", Minecraft.getInstance().getVersionType());
     }
 }

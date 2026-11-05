@@ -1,4 +1,4 @@
-package com.holybuckets.template.client;
+package com.holybuckets.builder.client;
 
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 

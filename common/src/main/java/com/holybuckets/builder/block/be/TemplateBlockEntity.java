@@ -1,4 +1,4 @@
-package com.holybuckets.template.block.be;
+package com.holybuckets.builder.block.be;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.ChestBlockEntity;

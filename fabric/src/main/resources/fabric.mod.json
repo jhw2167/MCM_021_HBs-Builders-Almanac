@@ -16,10 +16,10 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "com.holybuckets.template.TemplateMain"
+            "com.holybuckets.builder.BuildersAlmanacMainFabric"
         ],
         "client": [
-            "com.holybuckets.template.TemplateMainClient"
+            "com.holybuckets.builder.BuildersAlmanacMainFabricClient"
         ]
     },
     "mixins": [

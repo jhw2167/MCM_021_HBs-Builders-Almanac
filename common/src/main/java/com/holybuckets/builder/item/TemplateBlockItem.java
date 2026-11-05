@@ -1,6 +1,6 @@
-package com.holybuckets.template.item;
+package com.holybuckets.builder.item;
 
-import com.holybuckets.template.block.ModBlocks;
+import com.holybuckets.builder.block.ModBlocks;
 import net.minecraft.world.item.BlockItem;
 
 public class TemplateBlockItem extends BlockItem {

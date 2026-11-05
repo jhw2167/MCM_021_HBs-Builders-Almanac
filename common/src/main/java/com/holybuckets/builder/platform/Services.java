@@ -1,7 +1,7 @@
-package com.holybuckets.template.platform;
+package com.holybuckets.builder.platform;
 
-import com.holybuckets.template.Constants;
-import com.holybuckets.template.platform.services.IPlatformHelper;
+import com.holybuckets.builder.Constants;
+import com.holybuckets.builder.platform.services.IPlatformHelper;
 
 import java.util.ServiceLoader;
 

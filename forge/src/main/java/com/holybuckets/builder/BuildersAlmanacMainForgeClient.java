@@ -1,13 +1,13 @@
-package com.holybuckets.template;
+package com.holybuckets.builder;
 
-import com.holybuckets.template.client.CommonClassClient;
-import com.holybuckets.template.client.IBewlrRenderer;
+import com.holybuckets.builder.client.CommonClassClient;
+import com.holybuckets.builder.client.IBewlrRenderer;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
-public class TemplateMainClient {
+public class BuildersAlmanacMainForgeClient {
 
 
     public static void clientInitializeForge() {
