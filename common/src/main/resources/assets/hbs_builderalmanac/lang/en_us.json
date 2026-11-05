@@ -1,0 +1,32 @@
+{
+  "item.hbs_builderalmanac.builders_almanac": "Builder's Almanac",
+  "itemGroup.hbs_builderalmanac.hbs_builderalmanac": "HBs Builder's Almanac",
+  "container.hbs_builderalmanac.almanac": "Builder's Almanac",
+
+  "almanac.hbs_builderalmanac.tab.basic_shapes": "Basic Shapes",
+  "almanac.hbs_builderalmanac.tab.houses": "Houses",
+  "almanac.hbs_builderalmanac.tab.support_structures": "Support Structures",
+
+  "almanac.hbs_builderalmanac.basic_shapes.square_plane": "Square Plane (%1$s x %1$s)",
+  "almanac.hbs_builderalmanac.basic_shapes.cube": "Cube (%1$s x %1$s x %1$s)",
+  "almanac.hbs_builderalmanac.basic_shapes.circle_plane": "Circular Plane (%1$s wide)",
+  "almanac.hbs_builderalmanac.basic_shapes.hollow_cube": "Hollow Cube (%1$s x %1$s x %1$s)",
+  "almanac.hbs_builderalmanac.basic_shapes.sphere": "Sphere (%1$s wide)",
+  "almanac.hbs_builderalmanac.basic_shapes.half_sphere": "Half Sphere (%1$s wide)",
+  "almanac.hbs_builderalmanac.basic_shapes.hollow_sphere": "Hollow Sphere (%1$s wide)",
+
+  "almanac.hbs_builderalmanac.houses.small_hut": "Small Hut",
+  "almanac.hbs_builderalmanac.houses.log_cabin": "Log Cabin",
+  "almanac.hbs_builderalmanac.houses.cottage": "Cottage",
+  "almanac.hbs_builderalmanac.houses.farmhouse": "Farmhouse",
+  "almanac.hbs_builderalmanac.houses.longhouse": "Longhouse",
+  "almanac.hbs_builderalmanac.houses.tower_house": "Tower House",
+
+  "almanac.hbs_builderalmanac.support_structures.pillar": "Pillar",
+  "almanac.hbs_builderalmanac.support_structures.beam": "Beam",
+  "almanac.hbs_builderalmanac.support_structures.arch": "Arch",
+  "almanac.hbs_builderalmanac.support_structures.buttress": "Buttress",
+  "almanac.hbs_builderalmanac.support_structures.bridge_span": "Bridge Span",
+  "almanac.hbs_builderalmanac.support_structures.scaffold_tower": "Scaffold Tower",
+  "almanac.hbs_builderalmanac.support_structures.staircase": "Staircase"
+}

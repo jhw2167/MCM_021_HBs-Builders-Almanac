@@ -9,6 +9,11 @@ public class ModScreens {
             ModMenus.countingChestMenu::get,
             CountingChestScreen::new
         );
+
+        screens.registerScreen(
+            ModMenus.almanacMenu::get,
+            AlmanacScreen::new
+        );
     }
 
 }
