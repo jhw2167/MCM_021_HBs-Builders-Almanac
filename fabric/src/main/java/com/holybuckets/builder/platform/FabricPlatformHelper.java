@@ -1,5 +1,7 @@
 package com.holybuckets.builder.platform;
 
+import com.holybuckets.builder.item.BuildersAlmanacItem;
+import com.holybuckets.builder.item.FabricBuildersAlmanacItem;
 import com.holybuckets.builder.platform.services.IPlatformHelper;
 import net.fabricmc.loader.api.FabricLoader;
 
@@ -20,5 +22,10 @@ public class FabricPlatformHelper implements IPlatformHelper {
     public boolean isDevelopmentEnvironment() {
 
         return FabricLoader.getInstance().isDevelopmentEnvironment();
+    }
+
+    @Override
+    public BuildersAlmanacItem createBuildersAlmanac() {
+        return new FabricBuildersAlmanacItem();
     }
 }

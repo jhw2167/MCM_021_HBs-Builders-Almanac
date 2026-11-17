@@ -11,6 +11,9 @@ public class CommonClassClient {
 
     public static void initClient() {
         ClientEventRegistrar registrar = ClientEventRegistrar.getInstance();
+        ClientBuilderManager.init(registrar);
+        ClientAlmanacTemplates.init(registrar);
+        ClientAlmanacAnimator.init();
         ClientBalmEventRegister.registerEvents();
         ModRenderers.clientInitialize(BalmClient.getRenderers());
         ModScreens.clientInitialize(BalmClient.getScreens());

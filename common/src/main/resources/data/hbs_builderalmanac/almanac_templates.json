@@ -1,0 +1,1022 @@
+{
+  "medieval-0": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-0",
+    "size": [
+      9,
+      5,
+      3
+    ],
+    "blocks": 36,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      null
+    ]
+  },
+  "medieval-1": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-1",
+    "size": [
+      9,
+      6,
+      5
+    ],
+    "blocks": 53,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      null
+    ]
+  },
+  "medieval-2": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-2",
+    "size": [
+      7,
+      4,
+      4
+    ],
+    "blocks": 30,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      "wall"
+    ]
+  },
+  "medieval-3": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-3",
+    "size": [
+      13,
+      7,
+      5
+    ],
+    "blocks": 89,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      "wall"
+    ]
+  },
+  "medieval-4": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-4",
+    "size": [
+      13,
+      4,
+      4
+    ],
+    "blocks": 96,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      "wall"
+    ]
+  },
+  "medieval-5": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-5",
+    "size": [
+      15,
+      7,
+      5
+    ],
+    "blocks": 138,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      "wall"
+    ]
+  },
+  "medieval-6": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-6",
+    "size": [
+      17,
+      4,
+      4
+    ],
+    "blocks": 86,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      null
+    ]
+  },
+  "medieval-7": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-7",
+    "size": [
+      9,
+      8,
+      4
+    ],
+    "blocks": 61,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      "wall"
+    ]
+  },
+  "medieval-8": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-8",
+    "size": [
+      13,
+      10,
+      6
+    ],
+    "blocks": 109,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      "wall"
+    ]
+  },
+  "medieval-9": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-9",
+    "size": [
+      11,
+      7,
+      4
+    ],
+    "blocks": 63,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      "wall"
+    ]
+  },
+  "medieval-10": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-10",
+    "size": [
+      11,
+      5,
+      4
+    ],
+    "blocks": 71,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      "wall"
+    ]
+  },
+  "medieval-11": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-11",
+    "size": [
+      13,
+      8,
+      5
+    ],
+    "blocks": 117,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      "wall"
+    ]
+  },
+  "medieval-12": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-12",
+    "size": [
+      7,
+      4,
+      3
+    ],
+    "blocks": 21,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      "wall"
+    ]
+  },
+  "medieval-13": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-13",
+    "size": [
+      11,
+      6,
+      4
+    ],
+    "blocks": 51,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      "wall"
+    ]
+  },
+  "medieval-flatroof-0": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-flatroof-0",
+    "size": [
+      3,
+      2,
+      3
+    ],
+    "blocks": 15,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      null
+    ]
+  },
+  "medieval-flatroof-1": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-flatroof-1",
+    "size": [
+      5,
+      3,
+      5
+    ],
+    "blocks": 34,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "medieval-flatroof-2": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-flatroof-2",
+    "size": [
+      4,
+      2,
+      4
+    ],
+    "blocks": 17,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "medieval-flatroof-3": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-flatroof-3",
+    "size": [
+      4,
+      2,
+      4
+    ],
+    "blocks": 18,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "medieval-flatroof-4": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-flatroof-4",
+    "size": [
+      3,
+      1,
+      3
+    ],
+    "blocks": 8,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "medieval-flatroof-5": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-flatroof-5",
+    "size": [
+      3,
+      2,
+      3
+    ],
+    "blocks": 9,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "medieval-flatroof-6": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-flatroof-6",
+    "size": [
+      5,
+      2,
+      5
+    ],
+    "blocks": 25,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      null
+    ]
+  },
+  "medieval-towerflatroof-0": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-towerflatroof-0",
+    "size": [
+      7,
+      2,
+      7
+    ],
+    "blocks": 38,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "medieval-towerflatroof-1": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-towerflatroof-1",
+    "size": [
+      7,
+      2,
+      7
+    ],
+    "blocks": 44,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "medieval-towerflatroof-2": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-towerflatroof-2",
+    "size": [
+      7,
+      2,
+      7
+    ],
+    "blocks": 53,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "medieval-towerflatroof-3": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-towerflatroof-3",
+    "size": [
+      9,
+      2,
+      9
+    ],
+    "blocks": 73,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "medieval-towerflatroof-4": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-towerflatroof-4",
+    "size": [
+      11,
+      2,
+      11
+    ],
+    "blocks": 105,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "medieval-towerflatroof-5": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-towerflatroof-5",
+    "size": [
+      9,
+      2,
+      9
+    ],
+    "blocks": 61,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      null
+    ]
+  },
+  "medieval-towerflatroof-6": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-towerflatroof-6",
+    "size": [
+      11,
+      2,
+      11
+    ],
+    "blocks": 109,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      null
+    ]
+  },
+  "medieval-towerroof-0": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-towerroof-0",
+    "size": [
+      5,
+      8,
+      5
+    ],
+    "blocks": 48,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "medieval-towerroof-1": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-towerroof-1",
+    "size": [
+      5,
+      3,
+      5
+    ],
+    "blocks": 25,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "medieval-towerroof-2": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-towerroof-2",
+    "size": [
+      7,
+      6,
+      7
+    ],
+    "blocks": 74,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "medieval-towerroof-3": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-towerroof-3",
+    "size": [
+      9,
+      4,
+      9
+    ],
+    "blocks": 77,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "medieval-towerroof-4": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-towerroof-4",
+    "size": [
+      9,
+      3,
+      9
+    ],
+    "blocks": 66,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "medieval-towerroof-5": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-towerroof-5",
+    "size": [
+      11,
+      4,
+      11
+    ],
+    "blocks": 127,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "medieval-towerroof-6": {
+    "id": "hbs_builderalmanac:almanac/roofs/medieval-towerroof-6",
+    "size": [
+      13,
+      6,
+      13
+    ],
+    "blocks": 193,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "modern-0": {
+    "id": "hbs_builderalmanac:almanac/roofs/modern-0",
+    "size": [
+      4,
+      2,
+      4
+    ],
+    "blocks": 22,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "modern-1": {
+    "id": "hbs_builderalmanac:almanac/roofs/modern-1",
+    "size": [
+      3,
+      2,
+      3
+    ],
+    "blocks": 10,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "modern-2": {
+    "id": "hbs_builderalmanac:almanac/roofs/modern-2",
+    "size": [
+      5,
+      2,
+      5
+    ],
+    "blocks": 26,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "modern-3": {
+    "id": "hbs_builderalmanac:almanac/roofs/modern-3",
+    "size": [
+      5,
+      4,
+      5
+    ],
+    "blocks": 31,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      "wall"
+    ]
+  },
+  "modern-4": {
+    "id": "hbs_builderalmanac:almanac/roofs/modern-4",
+    "size": [
+      4,
+      3,
+      4
+    ],
+    "blocks": 17,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "townhouse-0": {
+    "id": "hbs_builderalmanac:almanac/roofs/townhouse-0",
+    "size": [
+      9,
+      5,
+      4
+    ],
+    "blocks": 68,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      "wall"
+    ]
+  },
+  "townhouse-1": {
+    "id": "hbs_builderalmanac:almanac/roofs/townhouse-1",
+    "size": [
+      11,
+      5,
+      5
+    ],
+    "blocks": 84,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      null
+    ]
+  },
+  "townhouse-2": {
+    "id": "hbs_builderalmanac:almanac/roofs/townhouse-2",
+    "size": [
+      11,
+      6,
+      4
+    ],
+    "blocks": 92,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      null
+    ]
+  },
+  "townhouse-3": {
+    "id": "hbs_builderalmanac:almanac/roofs/townhouse-3",
+    "size": [
+      17,
+      7,
+      5
+    ],
+    "blocks": 164,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      "wall"
+    ]
+  },
+  "townhouse-4": {
+    "id": "hbs_builderalmanac:almanac/roofs/townhouse-4",
+    "size": [
+      11,
+      6,
+      4
+    ],
+    "blocks": 77,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      null
+    ]
+  },
+  "townhouse-5": {
+    "id": "hbs_builderalmanac:almanac/roofs/townhouse-5",
+    "size": [
+      13,
+      6,
+      4
+    ],
+    "blocks": 133,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      "wall"
+    ]
+  },
+  "townhouse-6": {
+    "id": "hbs_builderalmanac:almanac/roofs/townhouse-6",
+    "size": [
+      7,
+      5,
+      4
+    ],
+    "blocks": 23,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      null
+    ]
+  },
+  "townhouse-7": {
+    "id": "hbs_builderalmanac:almanac/roofs/townhouse-7",
+    "size": [
+      5,
+      4,
+      4
+    ],
+    "blocks": 23,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "townhouse-8": {
+    "id": "hbs_builderalmanac:almanac/roofs/townhouse-8",
+    "size": [
+      11,
+      6,
+      4
+    ],
+    "blocks": 62,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "townhouse-9": {
+    "id": "hbs_builderalmanac:almanac/roofs/townhouse-9",
+    "size": [
+      11,
+      6,
+      4
+    ],
+    "blocks": 82,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      "wall"
+    ]
+  },
+  "townhouse-10": {
+    "id": "hbs_builderalmanac:almanac/roofs/townhouse-10",
+    "size": [
+      13,
+      7,
+      4
+    ],
+    "blocks": 90,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      null
+    ]
+  },
+  "townhouse-towerroof-0": {
+    "id": "hbs_builderalmanac:almanac/roofs/townhouse-towerroof-0",
+    "size": [
+      7,
+      11,
+      7
+    ],
+    "blocks": 126,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      "wall"
+    ]
+  },
+  "townhouse-towerroof-1": {
+    "id": "hbs_builderalmanac:almanac/roofs/townhouse-towerroof-1",
+    "size": [
+      7,
+      10,
+      7
+    ],
+    "blocks": 72,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "townhouse-towerroof-2": {
+    "id": "hbs_builderalmanac:almanac/roofs/townhouse-towerroof-2",
+    "size": [
+      7,
+      9,
+      7
+    ],
+    "blocks": 64,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "townhouse-towerroof-3": {
+    "id": "hbs_builderalmanac:almanac/roofs/townhouse-towerroof-3",
+    "size": [
+      5,
+      8,
+      5
+    ],
+    "blocks": 34,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "townhouse-towerroof-4": {
+    "id": "hbs_builderalmanac:almanac/roofs/townhouse-towerroof-4",
+    "size": [
+      5,
+      9,
+      5
+    ],
+    "blocks": 44,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "townhouse-towerroof-5": {
+    "id": "hbs_builderalmanac:almanac/roofs/townhouse-towerroof-5",
+    "size": [
+      5,
+      3,
+      5
+    ],
+    "blocks": 24,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "townhouse-towerroof-6": {
+    "id": "hbs_builderalmanac:almanac/roofs/townhouse-towerroof-6",
+    "size": [
+      9,
+      14,
+      9
+    ],
+    "blocks": 131,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  },
+  "townhouse-towerroof-7": {
+    "id": "hbs_builderalmanac:almanac/roofs/townhouse-towerroof-7",
+    "size": [
+      9,
+      14,
+      9
+    ],
+    "blocks": 175,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      null
+    ]
+  },
+  "townhouse-towerroof-8": {
+    "id": "hbs_builderalmanac:almanac/roofs/townhouse-towerroof-8",
+    "size": [
+      11,
+      14,
+      11
+    ],
+    "blocks": 197,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      "wall"
+    ]
+  },
+  "townhouse-towerroof-9": {
+    "id": "hbs_builderalmanac:almanac/roofs/townhouse-towerroof-9",
+    "size": [
+      11,
+      16,
+      11
+    ],
+    "blocks": 188,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      "wall"
+    ]
+  },
+  "simple_house_1": {
+    "id": "hbs_builderalmanac:almanac/simple_houses/simple_house_1",
+    "size": [
+      15,
+      14,
+      15
+    ],
+    "blocks": 747,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      null
+    ]
+  },
+  "simple_house_2": {
+    "id": "hbs_builderalmanac:almanac/simple_houses/simple_house_2",
+    "size": [
+      15,
+      12,
+      21
+    ],
+    "blocks": 882,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      "wall"
+    ]
+  },
+  "medieval_house_1": {
+    "id": "hbs_builderalmanac:almanac/medieval_houses/medieval_house_1",
+    "size": [
+      19,
+      20,
+      15
+    ],
+    "blocks": 792,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      null
+    ]
+  },
+  "medieval_house_2": {
+    "id": "hbs_builderalmanac:almanac/medieval_houses/medieval_house_2",
+    "size": [
+      10,
+      16,
+      14
+    ],
+    "blocks": 564,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      null
+    ]
+  },
+  "medieval_house_3": {
+    "id": "hbs_builderalmanac:almanac/medieval_houses/medieval_house_3",
+    "size": [
+      23,
+      26,
+      15
+    ],
+    "blocks": 1985,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      "wall"
+    ]
+  },
+  "modern_house_1": {
+    "id": "hbs_builderalmanac:almanac/modern_houses/modern_house_1",
+    "size": [
+      21,
+      21,
+      35
+    ],
+    "blocks": 2539,
+    "slots": [
+      "block",
+      "block",
+      "slab",
+      "wall"
+    ]
+  },
+  "modern_house_2": {
+    "id": "hbs_builderalmanac:almanac/modern_houses/modern_house_2",
+    "size": [
+      38,
+      14,
+      33
+    ],
+    "blocks": 3616,
+    "slots": [
+      "block",
+      null,
+      "slab",
+      null
+    ]
+  }
+}

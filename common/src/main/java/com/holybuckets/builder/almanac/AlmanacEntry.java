@@ -6,30 +6,42 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
-/**
- * One prefab build. Size is 0 for builds without a dimension (houses, supports).
- */
-public record AlmanacEntry(AlmanacCategory category, String name, int size, Item icon) {
+import java.util.ArrayList;
+import java.util.List;
 
-    /** Unique id such as basic_shapes/cube_5 */
+/**
+ * One prefab build. x is width, z is depth and y is height; unused dimensions are 0, all are 0 for houses and supports.
+ */
+public record AlmanacEntry(AlmanacCategory category, String name, int x, int y, int z, Item icon) {
+
     public String getId() {
-        String file = (size > 0) ? name + "_" + size : name;
-        return category.key + "/" + file;
+        List<Integer> dims = getDimensions();
+        if (dims.isEmpty()) return category.key + "/" + name;
+        return category.key + "/" + name + "_" + String.join("x", dims.stream().map(String::valueOf).toList());
     }
 
-    /** Resolves to data/hbs_builderalmanac/structures/almanac/[id].nbt */
+    /** Returns file location of packages nbt structure files **/
     public ResourceLocation getStructureId() {
         return new ResourceLocation(Constants.MOD_ID, "almanac/" + getId());
     }
 
     public Component getDisplayName() {
         String key = "almanac." + Constants.MOD_ID + "." + category.key + "." + name;
-        return (size > 0) ? Component.translatable(key, size) : Component.translatable(key);
+        return Component.translatable(key, getDimensions().toArray());
     }
 
     public ItemStack createIcon() {
-        ItemStack stack = new ItemStack(icon, Math.max(1, size));
+        ItemStack stack = new ItemStack(icon, Math.max(1, x));
         stack.setHoverName(getDisplayName().copy().withStyle(s -> s.withItalic(false)));
         return stack;
+    }
+
+    // Ordered x, z, y to match the lang arguments
+    private List<Integer> getDimensions() {
+        List<Integer> dims = new ArrayList<>(3);
+        if (x > 0) dims.add(x);
+        if (z > 0) dims.add(z);
+        if (y > 0) dims.add(y);
+        return dims;
     }
 }

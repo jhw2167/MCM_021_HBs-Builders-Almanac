@@ -3,7 +3,9 @@ package com.holybuckets.builder.menu;
 import com.holybuckets.builder.almanac.AlmanacCatalog;
 import com.holybuckets.builder.almanac.AlmanacCategory;
 import com.holybuckets.builder.almanac.AlmanacEntry;
+import com.holybuckets.builder.core.BuildManager;
 import com.holybuckets.builder.item.BuildersAlmanacItem;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
 import net.minecraft.world.Container;
 import net.minecraft.world.InteractionHand;
@@ -20,8 +22,11 @@ import java.util.List;
 import static com.holybuckets.builder.almanac.AlmanacCatalog.COLUMNS;
 
 /**
- * Creative-style picker. The 9x5 grid is a SimpleContainer of icon stacks that both sides rebuild
- * when the tab or scroll row changes (sent with clickMenuButton). Grid clicks select a build instead of moving items.
+ * Creative Menu-esque selection menu. Each "item" in this menu represents a type of build
+ * the tabs sort different builds into categories.
+ *
+ * Selecting a tab demarcates the selected build type and exit the menu.
+ * The menu can be exited with E, Esc, or selecting a build.
  */
 public class AlmanacMenu extends AbstractContainerMenu {
 
@@ -37,9 +42,11 @@ public class AlmanacMenu extends AbstractContainerMenu {
     private int rowOffset = 0;
     private AlmanacEntry selected;
 
-    public AlmanacMenu(int syncId, Inventory playerInventory, InteractionHand hand) {
+    public AlmanacMenu(int syncId, Inventory playerInventory, InteractionHand hand, AlmanacCategory tab)
+    {
         super(ModMenus.almanacMenu.get(), syncId);
         this.hand = hand;
+        if (tab != null) this.tab = tab;
 
         // Build grid (slots 0-44)
         for (int row = 0; row < GRID_ROWS; ++row) {
@@ -76,6 +83,7 @@ public class AlmanacMenu extends AbstractContainerMenu {
             if (id >= AlmanacCategory.values().length) return false;
             tab = AlmanacCategory.values()[id];
             rowOffset = 0;
+            if (player instanceof ServerPlayer sp) BuildManager.get(sp).setLastTab(tab);
         } else {
             rowOffset = Mth.clamp(id - SCROLL_BUTTON_OFFSET, 0, getMaxRowOffset());
         }
@@ -87,23 +95,33 @@ public class AlmanacMenu extends AbstractContainerMenu {
     @Override
     public void clicked(int slotId, int button, ClickType clickType, Player player) {
         if (slotId >= 0 && slotId < GRID_SIZE) {
-            if (gridEntries[slotId] != null) selected = gridEntries[slotId];
+            if (gridEntries[slotId] == null) return;
+            selected = gridEntries[slotId];
+            if (player instanceof ServerPlayer sp) {
+                BuildManager.get(sp).setSelected(sp, selected);
+                sp.closeContainer();
+            }
             return;
         }
         super.clicked(slotId, button, clickType, player);
     }
 
-    private void refreshGrid() {
-        List<List<AlmanacEntry>> rows = AlmanacCatalog.getRows(tab);
-        for (int i = 0; i < GRID_SIZE; ++i) {
-            int row = rowOffset + i / COLUMNS;
-            int col = i % COLUMNS;
-            AlmanacEntry entry = null;
-            if (row < rows.size() && col < rows.get(row).size())
-                entry = rows.get(row).get(col);
+    private void refreshGrid()
+    {
+        List<List<AlmanacEntry>> entries = AlmanacCatalog.getRows(tab);
+        for (int row = 0; row < GRID_ROWS; row++)
+        {
+            int i = row + rowOffset;
+            List<AlmanacEntry> rowEntries = (i < entries.size()) ? entries.get(i) : List.of();
+            for(int col = 0; col < COLUMNS; col++)
+            {
+                AlmanacEntry entry = null;
+                if (col < rowEntries.size()) entry = rowEntries.get(col);
 
-            gridEntries[i] = entry;
-            grid.setItem(i, (entry == null) ? ItemStack.EMPTY : entry.createIcon());
+                int rowCol = row * COLUMNS + col;
+                gridEntries[rowCol] = entry;
+                grid.setItem(rowCol, (entry == null) ? ItemStack.EMPTY : entry.createIcon());
+            }
         }
     }
 
@@ -117,7 +135,8 @@ public class AlmanacMenu extends AbstractContainerMenu {
         return ItemStack.EMPTY;
     }
 
-    // --- LockedSlot ---
+
+    // Slots are only for menu selection, not typical item inventory slots
     private static class LockedSlot extends Slot {
         public LockedSlot(Container container, int index, int x, int y) {
             super(container, index, x, y);

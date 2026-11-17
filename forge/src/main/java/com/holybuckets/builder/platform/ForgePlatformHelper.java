@@ -1,5 +1,7 @@
 package com.holybuckets.builder.platform;
 
+import com.holybuckets.builder.item.BuildersAlmanacItem;
+import com.holybuckets.builder.item.ForgeBuildersAlmanacItem;
 import com.holybuckets.builder.platform.services.IPlatformHelper;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.loading.FMLLoader;
@@ -22,5 +24,10 @@ public class ForgePlatformHelper implements IPlatformHelper {
     public boolean isDevelopmentEnvironment() {
 
         return !FMLLoader.isProduction();
+    }
+
+    @Override
+    public BuildersAlmanacItem createBuildersAlmanac() {
+        return new ForgeBuildersAlmanacItem();
     }
 }

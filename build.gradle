@@ -91,7 +91,13 @@ subprojects {
             }
         }
         maven { url 'https://hephaestus.dev/release' }
-        maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+        maven {
+            url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+            content {
+                includeGroup "software.bernie.geckolib"
+                includeGroup "com.eliotlash.mclib"
+            }
+        }
         maven { url 'https://maven.shedaniel.me' }
         maven { url 'https://maven.fabricmc.net/io/github/prospector/modmenu' }
         maven { url 'https://maven.terraformersmc.com/releases/' }
@@ -166,7 +172,8 @@ subprojects {
                 "balm_version_range": project.balm_version_range,
                 "foundation_version": project.foundation_version,
                 "foundation_min_version": project.foundation_min_version,
-                "create_version": project.create_version
+                "create_version": project.create_version,
+                "geckolib_version": project.geckolib_version
         ]
 
         filesMatching(['pack.mcmeta', 'fabric.mod.json', 'META-INF/mods.toml', '*.mixins.json']) {

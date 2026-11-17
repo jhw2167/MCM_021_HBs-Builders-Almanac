@@ -27,6 +27,7 @@ public class AlmanacScreen extends AbstractContainerScreen<AlmanacMenu> {
     private static final int SCROLL_Y = 18;
     private static final int SCROLL_HEIGHT = 112;
     private static final int TAB_WIDTH = 27;
+    private static final int TABS_PER_ROW = 7;
     private static final int SELECTED_COLOR = 0xFFE0B040;
 
     private boolean scrolling = false;
@@ -66,10 +67,13 @@ public class AlmanacScreen extends AbstractContainerScreen<AlmanacMenu> {
     }
 
     private void renderTab(GuiGraphics graphics, AlmanacCategory tab, boolean selected) {
-        int x = this.leftPos + tab.ordinal() * TAB_WIDTH;
-        int y = this.topPos - 28;
-        graphics.blit(TABS_TEXTURE, x, y, tab.ordinal() * 26, selected ? 32 : 0, 26, 32);
-        graphics.renderItem(tab.icon, x + 5, y + 9);
+        int column = tab.ordinal() % TABS_PER_ROW;
+        boolean top = isTopTab(tab);
+        int x = this.leftPos + column * TAB_WIDTH;
+        int y = top ? this.topPos - 28 : this.topPos + this.imageHeight - 4;
+        int v = (top ? 0 : 64) + (selected ? 32 : 0);
+        graphics.blit(TABS_TEXTURE, x, y, column * 26, v, 26, 32);
+        graphics.renderItem(tab.icon, x + 5, y + (top ? 9 : 7));
     }
 
     @Override
@@ -156,7 +160,13 @@ public class AlmanacScreen extends AbstractContainerScreen<AlmanacMenu> {
     }
 
     private boolean isOverTab(AlmanacCategory tab, double mouseX, double mouseY) {
-        int x = this.leftPos + tab.ordinal() * TAB_WIDTH;
-        return mouseX >= x && mouseX < x + TAB_WIDTH && mouseY >= this.topPos - 32 && mouseY < this.topPos;
+        int x = this.leftPos + (tab.ordinal() % TABS_PER_ROW) * TAB_WIDTH;
+        int y = isTopTab(tab) ? this.topPos - 32 : this.topPos + this.imageHeight - 4;
+        return mouseX >= x && mouseX < x + TAB_WIDTH && mouseY >= y && mouseY < y + 32;
+    }
+
+    // Tabs past the first row sit below the menu like the vanilla creative inventory
+    private boolean isTopTab(AlmanacCategory tab) {
+        return tab.ordinal() < TABS_PER_ROW;
     }
 }

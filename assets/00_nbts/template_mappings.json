@@ -1,0 +1,125 @@
+{
+  "simple_house_1": {
+    "source": "simple_house_1.nbt",
+    "category": "simple_houses",
+    "rules": [
+      ["stone_bricks", "primary"],
+      ["mossy_stone_bricks", "primary"],
+      ["oak_planks", "primary"],
+      ["stripped_oak_log", "primary"],
+      ["stripped_dark_oak_log", "secondary"],
+      ["stripped_dark_oak_wood", "secondary"],
+      ["dark_oak_wood", "secondary"],
+      ["dark_oak_planks@9-", "double_slab"],
+      ["moss_block@9-", "double_slab"],
+      ["chipped:red_moss_block", "double_slab"],
+      ["dark_oak_slab", "slab"],
+      ["dark_oak_stairs", "stairs"],
+      ["mcwstairs:oak_terrace_stairs", "stairs"]
+    ]
+  },
+  "simple_house_2": {
+    "source": "simple_house2.nbt",
+    "category": "simple_houses",
+    "rules": [
+      ["sandstone", "primary"],
+      ["cut_sandstone", "primary"],
+      ["spruce_planks", "secondary"],
+      ["brick_slab", "slab"],
+      ["mcwstairs:brick_platform", "slab:top"],
+      ["smooth_sandstone_stairs", "stairs"],
+      ["sandstone_wall", "wall"]
+    ]
+  },
+  "medieval_house_1": {
+    "source": "medieval_house_1.nbt",
+    "category": "medieval_houses",
+    "rules": [
+      ["cobblestone", "primary"],
+      ["stone", "primary"],
+      ["mossy_cobblestone", "primary"],
+      ["mossy_stone_bricks", "primary"],
+      ["diorite", "primary"],
+      ["moss_block@-5", "primary"],
+      ["moss_block", "double_slab"],
+      ["stripped_spruce_log", "secondary"],
+      ["oak_log", "secondary"],
+      ["spruce_planks", "secondary"],
+      ["spruce_slab@-5", "slab"],
+      ["copycats:copycat_slab", "slab"],
+      ["mcwstairs:spruce_bulk_stairs", "stairs"],
+      ["stone_brick_stairs", "stairs"],
+      ["mossy_cobblestone_stairs", "stairs"],
+      ["spruce_stairs@-3", "stairs"]
+    ]
+  },
+  "medieval_house_2": {
+    "source": "medieval_house_2.nbt",
+    "category": "medieval_houses",
+    "rules": [
+      ["stripped_spruce_log", "primary"],
+      ["stripped_spruce_wood", "primary"],
+      ["moss_block@-6", "primary"],
+      ["oak_log", "secondary"],
+      ["spruce_log@-6", "secondary"],
+      ["spruce_log", "double_slab"],
+      ["spruce_wood", "double_slab"],
+      ["moss_block", "double_slab"],
+      ["spruce_slab", "slab"],
+      ["spruce_stairs", "stairs"],
+      ["dark_oak_stairs@-7", "stairs"],
+      ["stone_brick_stairs", "stairs"]
+    ]
+  },
+  "medieval_house_3": {
+    "source": "medieval_house_3.nbt",
+    "category": "medieval_houses",
+    "rules": [
+      ["stone_bricks", "primary"],
+      ["cobblestone", "primary"],
+      ["andesite", "primary"],
+      ["diorite", "primary"],
+      ["mossy_cobblestone", "double_slab"],
+      ["moss_block", "double_slab"],
+      ["stripped_spruce_log", "secondary"],
+      ["spruce_planks", "secondary"],
+      ["stone_brick_wall", "wall"],
+      ["cobblestone_wall", "wall"],
+      ["mossy_cobblestone_wall", "wall"],
+      ["spruce_slab", "slab"],
+      ["cobblestone_stairs", "stairs"],
+      ["spruce_stairs@17-17", "stairs"]
+    ]
+  },
+  "modern_house_1": {
+    "source": "modern_house_1.nbt",
+    "category": "modern_houses",
+    "rules": [
+      ["*_concrete@3-", "primary"],
+      ["terracotta", "primary"],
+      ["*_terracotta", "primary"],
+      ["polished_blackstone_bricks@3-", "primary"],
+      ["cobblestone", "primary"],
+      ["jungle_planks", "secondary"],
+      ["dark_oak_planks", "secondary"],
+      ["polished_blackstone_brick_slab@7-", "slab"],
+      ["dark_oak_slab", "slab"],
+      ["jungle_slab", "slab"],
+      ["cobblestone_wall", "wall"]
+    ]
+  },
+  "modern_house_2": {
+    "source": "modern_house_2.nbt",
+    "category": "modern_houses",
+    "rules": [
+      ["brick_slab@10-", "slab"],
+      ["terracotta", "primary"],
+      ["*_terracotta", "primary"],
+      ["*_concrete", "primary"],
+      ["white_wool", "primary"],
+      ["stripped_oak_wood", "primary"],
+      ["cobbled_deepslate_stairs", "stairs"],
+      ["deepslate_tile_slab", "slab"]
+    ]
+  }
+}

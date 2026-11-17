@@ -1,0 +1,8 @@
+modern_house_2 
+- brick_slab (cobble_slab)
+- terracotta, any (cobblestone)
+- concrete, any (cobble)
+- white_wool (cobble)
+- stripped_oak_wood (cobble)
+- cobbled_deepslate_stairs (stone_brick_stairs)
+- deepslate_tile_slab (cobble_slab)

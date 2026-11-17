@@ -1,5 +1,7 @@
 package com.holybuckets.builder.platform.services;
 
+import com.holybuckets.builder.item.BuildersAlmanacItem;
+
 public interface IPlatformHelper {
 
     /**
@@ -33,4 +35,6 @@ public interface IPlatformHelper {
 
         return isDevelopmentEnvironment() ? "development" : "production";
     }
+
+    BuildersAlmanacItem createBuildersAlmanac();
 }
