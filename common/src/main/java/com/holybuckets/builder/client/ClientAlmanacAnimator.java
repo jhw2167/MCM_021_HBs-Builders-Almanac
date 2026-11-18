@@ -5,9 +5,12 @@ import com.holybuckets.builder.client.state.AlmanacBookState;
 import com.holybuckets.builder.client.state.BookEvent;
 import com.holybuckets.builder.client.state.BookState;
 import com.holybuckets.builder.item.BuildersAlmanacItem;
+import com.holybuckets.foundation.client.ClientEventRegistrar;
+import com.holybuckets.foundation.event.EventRegistrar;
+import com.holybuckets.foundation.event.custom.ClientTickEvent;
+import com.holybuckets.foundation.event.custom.TickType;
 import net.blay09.mods.balm.api.Balm;
 import net.blay09.mods.balm.api.event.TickPhase;
-import net.blay09.mods.balm.api.event.TickType;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
@@ -32,12 +35,15 @@ public class ClientAlmanacAnimator {
     private static float buildBlend = 0;
     private static float buildBlendO = 0;
 
-    public static void init() {
-        Balm.getEvents().onTickEvent(TickType.Client, TickPhase.End, ClientAlmanacAnimator::onClientTick);
+    public static void init(ClientEventRegistrar reg) {
+        reg.registerOnClientTick(TickType.ON_SINGLE_TICK, ClientAlmanacAnimator::onClientTick);
     }
 
-    private static void onClientTick(Minecraft mc) {
-        boolean held = mc.player != null && BuildersAlmanacItem.isHeld(mc.player);
+    private static void onClientTick(ClientTickEvent event)
+    {
+        Minecraft mc = Minecraft.getInstance();
+        if (mc.player == null) return;
+        boolean held = BuildersAlmanacItem.isHeld(mc.player);
         boolean menu = mc.screen instanceof AlmanacScreen;
         boolean buildMode = ClientBuilderManager.isBuildMode();
 
@@ -73,7 +79,6 @@ public class ClientAlmanacAnimator {
         return Mth.lerp(partialTicks, hoverO, hover);
     }
 
-    /** Eases from 0 to 1 while build mode is active */
     public static float getBuildBlend(float partialTicks) {
         return Mth.lerp(partialTicks, buildBlendO, buildBlend);
     }

@@ -10,7 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * One prefab build. x is width, z is depth and y is height; unused dimensions are 0, all are 0 for houses and supports.
+ * One prefab build. x is width, z is depth and y is height;
+ * unused dimensions are 0, all are 0 for houses and supports.
  */
 public record AlmanacEntry(AlmanacCategory category, String name, int x, int y, int z, Item icon) {
 
@@ -20,7 +21,7 @@ public record AlmanacEntry(AlmanacCategory category, String name, int x, int y, 
         return category.key + "/" + name + "_" + String.join("x", dims.stream().map(String::valueOf).toList());
     }
 
-    /** Returns file location of packages nbt structure files **/
+
     public ResourceLocation getStructureId() {
         return new ResourceLocation(Constants.MOD_ID, "almanac/" + getId());
     }
@@ -28,12 +29,6 @@ public record AlmanacEntry(AlmanacCategory category, String name, int x, int y, 
     public Component getDisplayName() {
         String key = "almanac." + Constants.MOD_ID + "." + category.key + "." + name;
         return Component.translatable(key, getDimensions().toArray());
-    }
-
-    public ItemStack createIcon() {
-        ItemStack stack = new ItemStack(icon, Math.max(1, x));
-        stack.setHoverName(getDisplayName().copy().withStyle(s -> s.withItalic(false)));
-        return stack;
     }
 
     // Ordered x, z, y to match the lang arguments

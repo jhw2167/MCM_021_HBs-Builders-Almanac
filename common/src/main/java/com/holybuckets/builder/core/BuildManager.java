@@ -111,10 +111,6 @@ public class BuildManager {
         AlmanacTemplates.sendSelected(player, selected);
     }
 
-    public void setPreviewBlock(ServerPlayer player, BuildRole role, BlockState state) {
-        previewBlocks[role.ordinal()] = state;
-        sendLayout(player);
-    }
 
     private void syncToClient(ServerPlayer player) {
         JsonObject json = new JsonObject();
@@ -127,7 +123,7 @@ public class BuildManager {
         BuildLayoutMessage.createAndFire(player, selected.getId(), getLayout(player.getServer()), previewBlocks);
     }
 
-    /** Shape tabs are generated, everything else reads data/hbs_builderalmanac/structures/almanac/[id].nbt */
+    //Generate basic shapes from alg, more complex shapes are nbts
     private BuildLayout getLayout(MinecraftServer server) {
         if (selected.category().generated) return BuildShapes.getLayout(selected);
         return server.getStructureManager().get(selected.getStructureId())

@@ -19,7 +19,7 @@ public class AlmanacCatalog {
 
     public static final int COLUMNS = 9;
     public static final String HOLLOW = "hollow_";
-    private static final int[] SIZES = {3, 6, 9, 12};
+    private static final int[] SIZES = {6, 9, 12, 15};
     private static final int[] SINGLE = {0};
     private static final int[] WALL_HEIGHTS = {2, 8, 14, 20};
     private static final Map<AlmanacCategory, List<List<AlmanacEntry>>> ROWS = new EnumMap<>(AlmanacCategory.class);
@@ -57,20 +57,9 @@ public class AlmanacCatalog {
         addShape(WALLS, "single_wall", Items.COBBLESTONE_WALL, null, WALL_HEIGHTS, true);
         addShape(WALLS, "double_wall", Items.STONE_BRICKS, null, WALL_HEIGHTS, true);
         addShape(WALLS, "triple_wall", Items.POLISHED_ANDESITE, null, WALL_HEIGHTS, true);
-        addShape(WALLS, "crenellated_wall", Items.DEEPSLATE_BRICK_WALL, null, WALL_HEIGHTS, true);
         addShape(WALLS, "corner_wall", Items.MOSSY_COBBLESTONE_WALL, null, WALL_HEIGHTS, true);
-        addShape(WALLS, "square_enclosure", Items.BRICK_WALL, null, WALL_HEIGHTS, true);
-        addShape(WALLS, "round_enclosure", Items.STONE_BRICK_WALL, null, WALL_HEIGHTS, true);
 
-        addSection(HOUSES, List.of(List.of(
-            build(HOUSES, "small_hut", Items.OAK_PLANKS),
-            build(HOUSES, "log_cabin", Items.SPRUCE_LOG),
-            build(HOUSES, "cottage", Items.COBBLESTONE),
-            build(HOUSES, "farmhouse", Items.HAY_BLOCK),
-            build(HOUSES, "longhouse", Items.DARK_OAK_PLANKS),
-            build(HOUSES, "tower_house", Items.STONE_BRICKS)
-        )));
-
+        /*
         addSection(SUPPORT_STRUCTURES, List.of(List.of(
             build(SUPPORT_STRUCTURES, "pillar", Items.OAK_LOG),
             build(SUPPORT_STRUCTURES, "beam", Items.STRIPPED_OAK_LOG),
@@ -80,6 +69,7 @@ public class AlmanacCatalog {
             build(SUPPORT_STRUCTURES, "scaffold_tower", Items.SCAFFOLDING),
             build(SUPPORT_STRUCTURES, "staircase", Items.OAK_STAIRS)
         )));
+        */
 
         List<List<AlmanacEntry>> medievalRoofs = new ArrayList<>();
         medievalRoofs.addAll(designRows(ROOFS, "medieval", 14, Items.SPRUCE_STAIRS));
@@ -94,18 +84,18 @@ public class AlmanacCatalog {
         modernRoofs.addAll(designRows(ROOFS, "townhouse-towerroof", 10, Items.DEEPSLATE_TILE_STAIRS));
         addSection(ROOFS, modernRoofs);
 
-        addSection(SIMPLE_HOUSES, List.of(List.of(
+        addSection(HOUSES, List.of(List.of(
             build(SIMPLE_HOUSES, "simple_house_1", Items.STONE_BRICKS),
             build(SIMPLE_HOUSES, "simple_house_2", Items.SANDSTONE)
         )));
 
-        addSection(MEDIEVAL_HOUSES, List.of(List.of(
+        addSection(HOUSES, List.of(List.of(
             build(MEDIEVAL_HOUSES, "medieval_house_1", Items.DIORITE),
             build(MEDIEVAL_HOUSES, "medieval_house_2", Items.STRIPPED_SPRUCE_LOG),
             build(MEDIEVAL_HOUSES, "medieval_house_3", Items.STONE_BRICKS)
         )));
 
-        addSection(MODERN_HOUSES, List.of(List.of(
+        addSection(HOUSES, List.of(List.of(
             build(MODERN_HOUSES, "modern_house_1", Items.WHITE_CONCRETE),
             build(MODERN_HOUSES, "modern_house_2", Items.CYAN_TERRACOTTA)
         )));

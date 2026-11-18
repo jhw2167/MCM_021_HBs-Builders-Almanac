@@ -14,10 +14,12 @@ public class ModItems {
     public static DeferredObject<CreativeModeTab> creativeModeTab;
     public static Item emptyBlockItem;
     public static Item buildersAlmanac;
+    public static Item buildIcon;
 
     public static void initialize(BalmItems items) {
         creativeModeTab = items.registerCreativeModeTab(id(Constants.MOD_ID), () -> new ItemStack(buildersAlmanac));
         items.registerItem(() -> buildersAlmanac = Services.PLATFORM.createBuildersAlmanac(), id("builders_almanac"));
+        items.registerItem(() -> buildIcon = new BuildIconItem(items.itemProperties()), id("build_icon"), null);
     }
 
     private static ResourceLocation id(String name) {

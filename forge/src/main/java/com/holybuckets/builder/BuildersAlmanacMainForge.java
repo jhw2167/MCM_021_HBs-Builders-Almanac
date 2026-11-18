@@ -1,6 +1,5 @@
 package com.holybuckets.builder;
 
-import com.holybuckets.builder.client.CommonClassClient;
 import net.blay09.mods.balm.api.Balm;
 import net.blay09.mods.balm.api.client.BalmClient;
 import net.minecraftforge.api.distmarker.Dist;
@@ -13,7 +12,7 @@ public class BuildersAlmanacMainForge {
     public BuildersAlmanacMainForge() {
         super();
         Balm.initialize(Constants.MOD_ID, CommonClass::init);
-        DistExecutor.runWhenOn(Dist.CLIENT, () -> () -> BalmClient.initialize(Constants.MOD_ID, CommonClassClient::initClient));
+        DistExecutor.runWhenOn(Dist.CLIENT, () -> () -> BalmClient.initialize(Constants.MOD_ID, BuildersAlmanacMainForgeClient::clientInitializeForge));
     }
 
 

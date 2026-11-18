@@ -1,5 +1,6 @@
 {
   "item.hbs_builderalmanac.builders_almanac": "Builder's Almanac",
+  "item.hbs_builderalmanac.build_icon": "Almanac Build",
   "itemGroup.hbs_builderalmanac.hbs_builderalmanac": "HBs Builder's Almanac",
   "container.hbs_builderalmanac.almanac": "Builder's Almanac",
   "almanac.hbs_builderalmanac.tab.basic_shapes": "Basic Shapes",

@@ -54,7 +54,7 @@ public class ClientBuilderManager {
     private static final int DEFAULT_DISTANCE = 8;
     private static final int DEFAULT_HEIGHT = 0;
     private static final int MIN_DISTANCE = 2;
-    private static final int MAX_DISTANCE = 16;
+    private static final int MAX_DISTANCE = 25;
     private static final String[] OVERLAY_LINES = {"exit", "place", "distance", "rotate", "undo"};
     private static final ItemStack[] OVERLAY_ICONS = {
         new ItemStack(Items.BARRIER), new ItemStack(Items.BRICKS), new ItemStack(Items.SPYGLASS),

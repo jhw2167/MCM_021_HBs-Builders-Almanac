@@ -13,7 +13,7 @@ public record BuildOrientation(int[] matrix) {
 
     public static final BuildOrientation IDENTITY = new BuildOrientation(new int[]{1, 0, 0, 0, 1, 0, 0, 0, 1});
 
-    /** One clockwise quarter turn about a world axis, matching BlockPos.rotate for Y */
+
     public BuildOrientation turn(Direction.Axis axis) {
         int[] turn = switch (axis) {
             case X -> new int[]{1, 0, 0, 0, 0, -1, 0, 1, 0};
@@ -36,12 +36,11 @@ public record BuildOrientation(int[] matrix) {
             matrix[6] * x + matrix[7] * y + matrix[8] * z);
     }
 
-    /** True when the build has only turned about Y, so block states can turn with it */
+
     public boolean isUpright() {
         return matrix[4] == 1;
     }
 
-    /** The turn about Y for block states, read from where +x ends up */
     public Rotation getYRotation() {
         if (matrix[6] == 1) return Rotation.CLOCKWISE_90;
         if (matrix[0] == -1) return Rotation.CLOCKWISE_180;
@@ -55,7 +54,6 @@ public record BuildOrientation(int[] matrix) {
         return array;
     }
 
-    /** Falls back to IDENTITY unless the array is a signed permutation, so a client cannot stretch or skew a build */
     public static BuildOrientation fromJson(JsonElement json) {
         if (json == null || !json.isJsonArray() || json.getAsJsonArray().size() != 9) return IDENTITY;
         int[] m = new int[9];

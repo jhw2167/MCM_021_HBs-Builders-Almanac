@@ -30,15 +30,6 @@ public class BuildersAlmanacMain {
 
     private void init()
     {
-
-        /*
-        Proxy for external APIs which are platform dependent
-        this.portalApi = (PortalApi) Balm.platformProxy()
-            .withFabric("com.holybuckets.challengetemple.externalapi.FabricPortalApi")
-            .withForge("com.holybuckets.challengetemple.externalapi.ForgePortalApi")
-            .build();
-            */
-
         //Events
         EventRegistrar registrar = EventRegistrar.getInstance();
         BuildManager.init(registrar);
@@ -46,15 +37,11 @@ public class BuildersAlmanacMain {
         AlmanacTemplates.init(registrar);
         BuildIconMesher.init(registrar);
 
-
-        //register local events
         registrar.registerOnBeforeServerStarted(this::onServerStarting);
 
     }
 
     private void onServerStarting(ServerStartingEvent e) {
-        //CONFIG = Balm.getConfig().getActiveConfig(TemplateConfig.class);
-        //this.DEV_MODE = CONFIG.devMode;
         this.DEV_MODE = false;
     }
 

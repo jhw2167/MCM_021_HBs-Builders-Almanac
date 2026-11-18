@@ -1,0 +1,7 @@
+{
+  "parent": "builtin/entity",
+  "gui_light": "side",
+  "textures": {
+    "particle": "hbs_builderalmanac:item/builders_almanac"
+  }
+}

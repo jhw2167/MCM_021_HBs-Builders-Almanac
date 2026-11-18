@@ -72,15 +72,11 @@ public class BuildShapes {
     private static List<BlockPos> wall(AlmanacEntry e) {
         int length = e.x();
         int height = e.y();
-        BlockPos o = BlockPos.ZERO;
         return switch (e.name()) {
             case "single_wall" -> thickWall(length, height, 1);
             case "double_wall" -> thickWall(length, height, 2);
             case "triple_wall" -> thickWall(length, height, 3);
-            case "crenellated_wall" -> crenellate(ShapeGen.cuboid(o, length, height, 1), height);
             case "corner_wall" -> ShapeGen.extrude(cornerFootprint(length), height);
-            case "square_enclosure" -> ShapeGen.extrude(ShapeGen.outline(ShapeGen.square(o, length, length)), height);
-            case "round_enclosure" -> ShapeGen.extrude(ShapeGen.outline(ShapeGen.circle(o, length)), height);
             default -> List.of();
         };
     }
@@ -93,13 +89,6 @@ public class BuildShapes {
         return positions;
     }
 
-    private static List<BlockPos> crenellate(List<BlockPos> wall, int height) {
-        List<BlockPos> positions = new ArrayList<>();
-        for (BlockPos pos : wall) {
-            if (pos.getY() < height - 1 || Math.floorMod(pos.getX(), 2) == 0) positions.add(pos);
-        }
-        return positions;
-    }
 
     private static List<BlockPos> cornerFootprint(int length) {
         int start = -(length - 1) / 2;

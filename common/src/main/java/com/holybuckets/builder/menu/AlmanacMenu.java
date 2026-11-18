@@ -4,6 +4,7 @@ import com.holybuckets.builder.almanac.AlmanacCatalog;
 import com.holybuckets.builder.almanac.AlmanacCategory;
 import com.holybuckets.builder.almanac.AlmanacEntry;
 import com.holybuckets.builder.core.BuildManager;
+import com.holybuckets.builder.item.BuildIconItem;
 import com.holybuckets.builder.item.BuildersAlmanacItem;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
@@ -120,7 +121,8 @@ public class AlmanacMenu extends AbstractContainerMenu {
 
                 int rowCol = row * COLUMNS + col;
                 gridEntries[rowCol] = entry;
-                grid.setItem(rowCol, (entry == null) ? ItemStack.EMPTY : entry.createIcon());
+
+                grid.setItem(rowCol, BuildIconItem.of(entry));
             }
         }
     }

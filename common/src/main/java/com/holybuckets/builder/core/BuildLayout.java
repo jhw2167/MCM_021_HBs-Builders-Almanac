@@ -21,7 +21,6 @@ public record BuildLayout(List<BlockPos> positions, List<BlockState> states) {
 
     public static final BuildLayout EMPTY = new BuildLayout(List.of(), List.of());
 
-    /** Reads the first palette of a structure template, skipping air */
     public static BuildLayout fromTemplate(StructureTemplate template) {
         List<StructureTemplate.Palette> palettes = ((StructureTemplateAccessor) template).getPalettes();
         if (palettes.isEmpty()) return EMPTY;
