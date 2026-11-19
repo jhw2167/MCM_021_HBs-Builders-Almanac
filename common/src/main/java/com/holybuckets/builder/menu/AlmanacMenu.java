@@ -39,6 +39,8 @@ public class AlmanacMenu extends AbstractContainerMenu {
     private final SimpleContainer grid = new SimpleContainer(GRID_SIZE);
     private final AlmanacEntry[] gridEntries = new AlmanacEntry[GRID_SIZE];
 
+    private final SimpleContainer blockPanel = new SimpleContainer(4);
+
     private AlmanacCategory tab = AlmanacCategory.BASIC_SHAPES;
     private int rowOffset = 0;
     private AlmanacEntry selected;
@@ -62,6 +64,11 @@ public class AlmanacMenu extends AbstractContainerMenu {
                 this.addSlot(new LockedSlot(playerInventory, col, 9 + col * 18, 112));
             else
                 this.addSlot(new Slot(playerInventory, col, 9 + col * 18, 112));
+        }
+
+        // add the blockPanel negative left aligned
+        for(int i = 0; i < 4; i++) {
+            this.addSlot(new Slot(blockPanel, i, -20, 18 + i * 18));
         }
 
         refreshGrid();

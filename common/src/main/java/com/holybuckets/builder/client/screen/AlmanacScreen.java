@@ -39,7 +39,8 @@ public class AlmanacScreen extends AbstractContainerScreen<AlmanacMenu> {
     }
 
     @Override
-    protected void renderBg(GuiGraphics graphics, float partialTick, int mouseX, int mouseY) {
+    protected void renderBg(GuiGraphics graphics, float partialTick, int mouseX, int mouseY)
+    {
         int x = (this.width - this.imageWidth) / 2;
         int y = (this.height - this.imageHeight) / 2;
 
@@ -56,14 +57,11 @@ public class AlmanacScreen extends AbstractContainerScreen<AlmanacMenu> {
 
         renderTab(graphics, menu.getTab(), true);
 
-        // Selected build backdrop
-        if (menu.getSelected() != null) {
-            for (int i = 0; i < AlmanacMenu.GRID_SIZE; ++i) {
-                if (menu.getEntry(i) != menu.getSelected()) continue;
-                Slot slot = menu.slots.get(i);
-                graphics.fill(x + slot.x - 1, y + slot.y - 1, x + slot.x + 17, y + slot.y + 17, SELECTED_COLOR);
-            }
-        }
+        // Render side panel
+        int panelX = x-20;
+        int panelY = y;
+        graphics.blit(TEXTURE, panelX, panelY, 0, 0, 50, this.imageHeight / 2);
+
     }
 
     private void renderTab(GuiGraphics graphics, AlmanacCategory tab, boolean selected) {

@@ -8,6 +8,7 @@ import com.holybuckets.builder.almanac.AlmanacCategory;
 import com.holybuckets.builder.almanac.AlmanacEntry;
 import com.holybuckets.builder.item.BuildersAlmanacItem;
 import com.holybuckets.builder.networking.BuildLayoutMessage;
+import com.holybuckets.foundation.CommonClass;
 import com.holybuckets.foundation.HBUtil;
 import com.holybuckets.foundation.event.EventRegistrar;
 import com.holybuckets.foundation.event.custom.ServerTickEvent;
@@ -32,6 +33,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Server side build state, one per player. Held in RAM only, so selections and
@@ -132,8 +134,8 @@ public class BuildManager {
     }
 
     //** Placement
-
-    private void place(ServerPlayer player, BlockPos origin, BuildOrientation orientation) {
+    private void place(ServerPlayer player, BlockPos origin, BuildOrientation orientation)
+    {
         if (!buildMode || selected == null || !BuildersAlmanacItem.isHeld(player)) return;
         if (!selected.category().tips && !orientation.isUpright()) return;
         if (!origin.closerThan(player.blockPosition(), MAX_PLACE_DISTANCE)) return;
@@ -151,8 +153,29 @@ public class BuildManager {
         placedHistory.subList(historyIndex, placedHistory.size()).clear();
         placedHistory.add(new PlacedBuild(selected, level.dimension(), origin, orientation, placed));
         historyIndex = placedHistory.size();
+        CommonClass.MESSAGER.sendBottomActionHint( placeMsg(placedHistory.get(historyIndex-1)) );
         LoggerProject.logDebug(CLASS_ID + "001", "Placed " + selected.getId() + " for " + playerId + " at " + origin + ", " + placed.size() + " blocks");
     }
+
+        final String BASE_PLCD_MSG = "Placed Build: %s at %s: placed ";
+        private String placeMsg(PlacedBuild build) {
+            String blockpos = HBUtil.BlockUtil.positionToString(build.origin());
+            String msg = String.format(BASE_PLCD_MSG, buildName(build), blockpos);
+            Map<Block, AtomicInteger> blockCounts = new HashMap<>();
+            for(BlockState state : build.placedBlocks().values()) {
+                blockCounts.computeIfAbsent(state.getBlock(), b -> new AtomicInteger()).incrementAndGet();
+            }
+            for(Map.Entry<Block, AtomicInteger> entry : blockCounts.entrySet()) {
+                String encoded = HBUtil.ItemUtil.encodeMessageItem( entry.getKey().asItem() );
+                 msg += String.format("%d %s, ", entry.getValue().get(), encoded);
+            }
+            return msg.substring(0, msg.length() - 2); // remove trailing comma and space
+        }
+
+        private String buildName(PlacedBuild build) {
+            return build.entry().getDisplayName().getString();
+        }
+
 
     private void undo(ServerPlayer player) {
         if (historyIndex == 0 || !BuildersAlmanacItem.isHeld(player)) return;

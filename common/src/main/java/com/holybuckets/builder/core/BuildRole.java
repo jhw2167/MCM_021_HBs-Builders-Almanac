@@ -10,7 +10,7 @@ public enum BuildRole {
     PRIMARY(Blocks.COBBLESTONE, "block"),
     SECONDARY(Blocks.OAK_PLANKS, "block"),
     TERTIARY(Blocks.COBBLESTONE_SLAB, "slab"),
-    QUATERNARY(Blocks.COBBLESTONE_WALL, "wall");
+    QUATERNARY(Blocks.COBBLESTONE_STAIRS, "stairs");
 
     public final Block block;
     public final String slotType;

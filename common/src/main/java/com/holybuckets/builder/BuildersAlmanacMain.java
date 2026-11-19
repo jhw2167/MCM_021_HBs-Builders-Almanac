@@ -6,7 +6,6 @@ import com.holybuckets.foundation.event.EventRegistrar;
 import com.holybuckets.builder.config.TemplateConfig;
 import com.holybuckets.builder.core.AlmanacTemplates;
 import com.holybuckets.builder.core.BuildManager;
-import com.holybuckets.builder.core.MightyDesignConverter;
 import net.blay09.mods.balm.api.Balm;
 import net.blay09.mods.balm.api.event.EventPriority;
 import net.blay09.mods.balm.api.event.server.ServerStartingEvent;
@@ -33,7 +32,6 @@ public class BuildersAlmanacMain {
         //Events
         EventRegistrar registrar = EventRegistrar.getInstance();
         BuildManager.init(registrar);
-        MightyDesignConverter.init(registrar);
         AlmanacTemplates.init(registrar);
         BuildIconMesher.init(registrar);
 

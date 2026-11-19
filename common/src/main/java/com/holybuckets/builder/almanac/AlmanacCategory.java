@@ -12,10 +12,7 @@ public enum AlmanacCategory {
     WALLS("walls", new ItemStack(Items.COBBLESTONE_WALL), true, true),
     HOUSES("houses", new ItemStack(Items.OAK_DOOR), false, false),
     SUPPORT_STRUCTURES("support_structures", new ItemStack(Items.SCAFFOLDING), false, false),
-    ROOFS("roofs", new ItemStack(Items.DARK_OAK_STAIRS), false, false),
-    SIMPLE_HOUSES("simple_houses", new ItemStack(Items.OAK_PLANKS), false, false),
-    MEDIEVAL_HOUSES("medieval_houses", new ItemStack(Items.SPRUCE_LOG), false, false),
-    MODERN_HOUSES("modern_houses", new ItemStack(Items.WHITE_CONCRETE), false, false);
+    ROOFS("roofs", new ItemStack(Items.DARK_OAK_STAIRS), false, false);
 
     public final String key;
     public final ItemStack icon;
